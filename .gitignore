@@ -1,0 +1,7 @@
+/.idea/
+/node_modules/
+/docs/
+.DS_Store
+*.iml
+.env
+*.pk

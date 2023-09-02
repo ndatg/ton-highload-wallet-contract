@@ -1,0 +1,7 @@
+highload-wallet-code:
+  func:
+    - func/highload-wallet-code.fc
+
+highload-wallet-v2-code:
+  func:
+    - func/highload-wallet-v2-code.fc

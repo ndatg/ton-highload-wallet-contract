@@ -1,0 +1,12 @@
+"TonUtil.fif" include
+"Asm.fif" include
+
+."highload-wallet-code.fif hex code:" cr
+"highload-wallet-code.fif" include
+2 boc+>B dup Bx. cr
+
+cr
+
+."highload-wallet-v2-code.fif hex code:" cr
+"highload-wallet-v2-code.fif" include
+2 boc+>B dup Bx. cr
