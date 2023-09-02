@@ -14,6 +14,7 @@ The first execution of the `sendTransfer` will make the wallet code deploy.
 
 ```js
 import { HighloadWalletContract, HighloadWalletContractV2 } from "ton-highload-wallet-contract";
+import { mnemonicToPrivateKey } from "ton-crypto";
 
 // Create contract
 const key = await mnemonicToPrivateKey(mnemonic.split(" "));
