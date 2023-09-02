@@ -13,7 +13,7 @@ npm install ton-highload-wallet-contract --save
 The first execution of the `sendTransfer` will make the wallet code deploy.
 
 ```js
-import { HighloadWalletContract } from "ton-highload-wallet-contract";
+import { HighloadWalletContract, HighloadWalletContractV2 } from "ton-highload-wallet-contract";
 
 // Create contract
 const key = await mnemonicToPrivateKey(mnemonic.split(" "));
