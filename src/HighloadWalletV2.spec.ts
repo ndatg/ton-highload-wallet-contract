@@ -1,6 +1,6 @@
-import { TonClient } from "ton";
-import { Address, internal } from "ton-core";
-import { mnemonicToPrivateKey } from "ton-crypto";
+import { TonClient } from "@ton/ton";
+import { Address, internal } from "@ton/core";
+import { mnemonicToPrivateKey } from "@ton/crypto";
 import { HighloadWalletContractV2 } from "./HighloadWalletV2";
 
 describe("HighloadWalletV2", () => {

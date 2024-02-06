@@ -10,8 +10,8 @@ import {
   Sender,
   SendMode,
   Dictionary,
-} from "ton-core";
-import { Maybe } from "ton-core/dist/utils/maybe";
+} from "@ton/core";
+import { Maybe } from "@ton/core/dist/utils/maybe";
 import { HighloadWalletDictionaryValue } from "./types/HighloadWalletDictionaryValue";
 import { createHighloadWalletTransferV2 } from "./signing/createWalletTransfer";
 

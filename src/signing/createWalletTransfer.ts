@@ -1,6 +1,6 @@
-import { beginCell, Dictionary, MessageRelaxed, SendMode } from "ton-core";
-import { sign } from "ton-crypto";
-import { Maybe } from "ton-core/dist/utils/maybe";
+import { beginCell, Dictionary, MessageRelaxed, SendMode } from "@ton/core";
+import { sign } from "@ton/crypto";
+import { Maybe } from "@ton/core/dist/utils/maybe";
 import { HighloadWalletDictionaryValue } from "../types/HighloadWalletDictionaryValue";
 import { HighloadWalletContractV2 } from "../HighloadWalletV2";
 

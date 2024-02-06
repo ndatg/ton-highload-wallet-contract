@@ -9,8 +9,8 @@ import {
   MessageRelaxed,
   Sender,
   SendMode,
-} from "ton-core";
-import { Maybe } from "ton-core/dist/utils/maybe";
+} from "@ton/core";
+import { Maybe } from "@ton/core/dist/utils/maybe";
 import { createHighloadWalletTransfer } from "./signing/createWalletTransfer";
 
 export class HighloadWalletContract implements Contract {

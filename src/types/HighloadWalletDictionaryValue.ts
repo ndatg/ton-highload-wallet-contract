@@ -5,7 +5,7 @@ import {
   storeMessageRelaxed,
   DictionaryValue,
   loadMessageRelaxed,
-} from "ton-core";
+} from "@ton/core";
 
 export const HighloadWalletDictionaryValue: DictionaryValue<{
   sendMode: SendMode
