@@ -10,6 +10,7 @@ import {
   Sender,
   SendMode,
   Dictionary,
+  toNano,
 } from "@ton/core";
 import { Maybe } from "@ton/core/dist/utils/maybe";
 import { HighloadWalletDictionaryValue } from "./types/HighloadWalletDictionaryValue";
@@ -131,6 +132,72 @@ export class HighloadWalletContractV2 implements Contract {
       walletId: this.walletId,
       timeout: args.timeout,
     });
+  }
+
+  /**
+   * Create token transfer body
+   */
+  createTokenTransfer(args: {
+    toAddress: string,
+    responseAddress: string,
+    jettonAmount: string,
+    forwardAmount?: string,
+    forwardPayload?: string
+  }): Cell {
+    const data = beginCell()
+      .storeUint(0xf8a7ea5, 32)
+      .storeUint(0, 64)
+      .storeCoins(toNano(args.jettonAmount))
+      .storeAddress(Address.parse(args.toAddress))
+      .storeAddress(Address.parse(args.responseAddress))
+      .storeBit(false)
+      .storeCoins(args.forwardAmount ? toNano(args.forwardAmount) : 0);
+
+    if (args.forwardPayload) {
+      data.storeBit(true);
+      data.storeRef(
+        beginCell()
+          .storeUint(0, 32)
+          .storeStringTail(args.forwardPayload)
+          .endCell()
+      );
+    } else {
+      data.storeBit(false);
+    }
+
+    return data.endCell();
+  }
+
+  /**
+   * Create NFT transfer body
+   */
+  createNFTTransferBody(args: {
+    toAddress: string,
+    responseAddress: string,
+    forwardAmount?: string,
+    forwardPayload?: string
+  }): Cell {
+    const data = beginCell()
+      .storeUint(0x5fcc3d14, 32)
+      .storeUint(0, 64)
+      .storeAddress(Address.parse(args.toAddress))
+      .storeAddress(Address.parse(args.responseAddress))
+      .storeBit(false)
+      .storeCoins(args.forwardAmount ? toNano(args.forwardAmount) : 0);
+
+    if (args.forwardPayload) {
+      data.storeBit(true);
+      data.storeRef(
+        beginCell()
+          .storeUint(0, 32)
+          .storeStringTail(args.forwardPayload)
+          .endCell()
+      );
+    } else {
+      data.storeBit(false);
+    }
+
+    return data.endCell();
   }
 
   /**

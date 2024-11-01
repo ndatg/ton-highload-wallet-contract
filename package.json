@@ -1,6 +1,6 @@
 {
   "name": "ton-highload-wallet-contract",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "TON Highload Wallet Contract",
   "main": "dist/index.js",
   "files": [
@@ -23,9 +23,6 @@
   "license": "MIT",
   "repository": "https://github.com/ndatg/ton-highload-wallet-contract",
   "devDependencies": {
-    "@ton/core": "^0.54.0",
-    "@ton/crypto": "^3.2.0",
-    "@ton/ton": "^13.10.0",
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -34,5 +31,10 @@
     "ts-node": "^10.9.1",
     "typedoc": "^0.25.0",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@ton/core": "^0.59.0",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.1.0"
   }
 }
