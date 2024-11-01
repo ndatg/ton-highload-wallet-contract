@@ -48,12 +48,18 @@ await contract.sendTransfer({
       body: "test transfer",
       bounce: false,
     }),
+    internal({
+      to: "EQBYivdc0GAk-nnczaMnYNuSjpeXu2nJS3DZ4KqLjosX5sVC",
+      value: "0.2",
+      body: "test transfer",
+      bounce: false,
+    }),
 
     // Token transfer
     internal({
       to: "kQDPk5jRLMDHyhYuWDSURQoTddMuhpOXMNSjzcn-vSOMeSm0", // token wallet address
       value: "0.05", // amount for token transfer
-      body: contract.createTokenTransfer({
+      body: contract.createTokenTransferBody({
         toAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // destination
         responseAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // sender address
         jettonAmount: "1", // amount

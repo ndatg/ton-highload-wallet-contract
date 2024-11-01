@@ -129,7 +129,7 @@ export class HighloadWalletContract implements Contract {
   /**
    * Create token transfer body
    */
-  createTokenTransfer(args: {
+  createTokenTransferBody(args: {
     toAddress: string,
     responseAddress: string,
     jettonAmount: string,

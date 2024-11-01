@@ -57,7 +57,7 @@ describe("HighloadWalletV2", () => {
         // internal({
         //   to: "kQDPk5jRLMDHyhYuWDSURQoTddMuhpOXMNSjzcn-vSOMeSm0", // token wallet address
         //   value: "0.05", // amount for token transfer
-        //   body: contract.createTokenTransfer({
+        //   body: contract.createTokenTransferBody({
         //     toAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // destination
         //     responseAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // sender address
         //     jettonAmount: "1", // amount
