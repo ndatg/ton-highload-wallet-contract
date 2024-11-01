@@ -139,7 +139,7 @@ export class HighloadWalletContract implements Contract {
     const data = beginCell()
       .storeUint(0xf8a7ea5, 32)
       .storeUint(0, 64)
-      .storeCoins(toNano(args.jettonAmount))
+      .storeCoins(BigInt(args.jettonAmount))
       .storeAddress(Address.parse(args.toAddress))
       .storeAddress(Address.parse(args.responseAddress))
       .storeBit(false)

@@ -62,7 +62,7 @@ await contract.sendTransfer({
       body: contract.createTokenTransferBody({
         toAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // destination
         responseAddress: "EQA3wBIL7tklY8yBlNkErY2HDI9OKP5TbxoLVomYSLX1JlDe", // sender address
-        jettonAmount: "1", // amount
+        jettonAmount: "1000000000", // 1 token amount (amount with 9 decimals)
         forwardPayload: "test token transfer"
       })
     }),
